@@ -1,10 +1,14 @@
 import Header from 'components/Header';
 import PropTypes from 'prop-types';
 
-const Categories = ({ categoriesList }) => {
+const Categories = ({ categoriesList, closeCategories }) => {
   return (
     <>
-      <Header title="Categories" />
+      <Header
+        title="Categories"
+        closeCategories={closeCategories}
+        btnContent={'x'}
+      />
       <ul>
         {categoriesList.map(({ id, category }) => {
           return (
